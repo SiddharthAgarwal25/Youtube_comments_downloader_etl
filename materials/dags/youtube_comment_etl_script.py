@@ -3,9 +3,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 import pandas as pd
 import boto3
-def run_etl():
-    api_key = 'AIzaSyDMfEdFsl_sFA2O-8CTuEcsFJEI5flR7k8'
-    playlist_ids = ['PLbHrOSG7nVN0iy3JQonGt6p6illtDhoqX']
+def run_etl(api_key, playlist_ids):
+    api_key = api_key
+    playlist_ids = [playlist_ids]
 
     youtube = build('youtube', 'v3', developerKey=api_key)
 
@@ -125,4 +125,4 @@ def run_etl():
     return comments_df
 
 
-run_etl()
+# run_etl()
