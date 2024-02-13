@@ -22,7 +22,7 @@ dag = DAG(
     'youtube_dag',
     default_args=default_args,
     description='Our first DAG with ETL process!',
-    schedule_interval=timedelta(days=1),
+    schedule_interval=None,
 )
 run_etl_pipe = PythonOperator(
     task_id='complete_twitter_etl',
