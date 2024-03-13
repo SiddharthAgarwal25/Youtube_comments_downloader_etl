@@ -114,8 +114,8 @@ def run_etl(api_key, playlist_ids):
     comments_df = pd.DataFrame(all_comments)
     print(comments_df)
     csv_file_path = "youtube_comments_data.csv"
-    aws_access_key_id = 'AKIAT2IP6T727VXOYIUN'
-    aws_secret_access_key = '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'
+    aws_access_key_id = ''
+    aws_secret_access_key = ''
     comments_df.to_csv(csv_file_path, index=False)
     s3_bucket_name = "youtube-airflow-proj"
     s3_key = "youtube_comments_data.csv"
